@@ -1,0 +1,18 @@
+{"level":"info","msg":"Inject devspacehelper...","time":"2024-12-19T13:48:03+07:00"}
+{"level":"info","msg":"Start syncing","time":"2024-12-19T13:48:12+07:00"}
+{"level":"error","msg":"Sync Error on D:\\Custom reviews\\ui-review\\config\\elasticmq.conf: Sync - connection lost to pod linh-dev-reviews/sqs-cc478c67b-nqmb7: Use inotify as watching method in container\n2024/12/19 06:48:14 error watching path /opt/config/elasticmq.conf: readdirent /opt/config/elasticmq.conf: not a directory\n command terminated with exit code 1","time":"2024-12-19T13:48:14+07:00"}
+{"level":"info","msg":"Start syncing","time":"2024-12-19T13:48:52+07:00"}
+{"level":"error","msg":"Sync Error on D:\\Custom reviews\\ui-review\\config\\elasticmq.conf: Sync - connection lost to pod linh-dev-reviews/sqs-cc478c67b-nqmb7: Use inotify as watching method in container\n2024/12/19 06:48:54 error watching path /opt/config/elasticmq.conf: readdirent /opt/config/elasticmq.conf: not a directory\n command terminated with exit code 1","time":"2024-12-19T13:48:54+07:00"}
+{"level":"info","msg":"Inject devspacehelper...","time":"2024-12-19T13:52:12+07:00"}
+{"level":"info","msg":"Start syncing","time":"2024-12-19T13:52:19+07:00"}
+{"level":"error","msg":"Sync Error on D:\\Custom reviews\\ui-review\\config\\elasticmq.conf: Sync - connection lost to pod linh-dev-reviews/sqs-cc478c67b-hjmtk: Use inotify as watching method in container\n2024/12/19 06:52:21 error watching path /opt/config/elasticmq.conf: readdirent /opt/config/elasticmq.conf: not a directory\n command terminated with exit code 1","time":"2024-12-19T13:52:21+07:00"}
+{"level":"info","msg":"Start syncing","time":"2024-12-19T13:54:00+07:00"}
+{"level":"error","msg":"Sync Error on D:\\Custom reviews\\ui-review\\config\\elasticmq.conf: Sync - connection lost to pod linh-dev-reviews/sqs-cc478c67b-hjmtk: Use inotify as watching method in container\n2024/12/19 06:54:02 error watching path /opt/config/elasticmq.conf: readdirent /opt/config/elasticmq.conf: not a directory\n command terminated with exit code 1","time":"2024-12-19T13:54:02+07:00"}
+{"level":"info","msg":"Inject devspacehelper...","time":"2024-12-19T13:55:47+07:00"}
+{"level":"info","msg":"Start syncing","time":"2024-12-19T13:56:03+07:00"}
+{"level":"error","msg":"Sync Error on D:\\Custom reviews\\ui-review\\config\\elasticmq.conf: Sync - connection lost to pod linh-dev-reviews/sqs-cc478c67b-7kxmr: Use inotify as watching method in container\n2024/12/19 06:56:06 error watching path /opt/config/elasticmq.conf: readdirent /opt/config/elasticmq.conf: not a directory\n command terminated with exit code 1","time":"2024-12-19T13:56:05+07:00"}
+{"level":"info","msg":"Start syncing","time":"2024-12-19T13:58:21+07:00"}
+{"level":"error","msg":"Sync Error on D:\\Custom reviews\\ui-review\\config\\elasticmq.conf: Sync - connection lost to pod linh-dev-reviews/sqs-cc478c67b-7kxmr: Use inotify as watching method in container\n2024/12/19 06:58:24 error watching path /opt/config/elasticmq.conf: readdirent /opt/config/elasticmq.conf: not a directory\n command terminated with exit code 1","time":"2024-12-19T13:58:23+07:00"}
+{"level":"info","msg":"Inject devspacehelper...","time":"2024-12-19T14:04:23+07:00"}
+{"level":"info","msg":"Start syncing","time":"2024-12-19T14:04:29+07:00"}
+{"level":"error","msg":"Sync Error on D:\\Custom reviews\\ui-review\\config\\elasticmq.conf: Sync - connection lost to pod linh-dev-reviews/sqs-cc478c67b-26kx7: Use inotify as watching method in container\n2024/12/19 07:04:31 error watching path /opt/config/elasticmq.conf: readdirent /opt/config/elasticmq.conf: not a directory\n command terminated with exit code 1","time":"2024-12-19T14:04:31+07:00"}

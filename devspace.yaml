@@ -1,0 +1,215 @@
+version: v2beta1
+name: appio-reviewsgit
+vars:
+  DEBUG_PORT:
+    question: Which local debug port do you want to use?
+    default: "9231"
+  SUB_DOMAIN:
+    question: Which subdomain (getappio.com) to use for the UI?
+    default: "nghia"
+# This is a list of `pipelines` that DevSpace can execute (you can define your own)
+pipelines:
+  # This is the pipeline for the main command: `devspace dev` (or `devspace run-pipeline dev`)
+  dev:
+    run: |-
+      run_dependencies --all       # 1. Deploy any projects this project needs (see "dependencies")
+      ensure_pull_secrets --all    # 2. Ensure pull secrets
+      create_deployments --all     # 3. Deploy Helm charts and manifests specfied as "deployments"
+      run_pipelines forward-mysql
+      start_dev ui                # 4. Start dev mode "ui" (see "dev" section)
+  # You can run this pipeline via `devspace deploy` (or `devspace run-pipeline deploy`)
+  deploy:
+    run: |-
+      run_dependencies --all                            # 1. Deploy any projects this project needs (see "dependencies")
+      ensure_pull_secrets --all                         # 2. Ensure pull secrets
+      build_images --all -t $(git describe --always)    # 3. Build, tag (git commit hash) and push all images (see "images")
+      create_deployments --all                          # 4. Deploy Helm charts and manifests specfied as "deployments"
+  depend: |-
+      run_dependencies --all                            # 1. Deploy any projects this project needs (see "dependencies")
+      ensure_pull_secrets --all                         # 2. Ensure pull secrets
+      build_images --all -t $(git describe --always)    # 3. Build, tag (git commit hash) and push all images (see "images")
+      create_deployments redis mysql sqs                          # 4. Deploy Helm charts and manifests specfied as "deployments"
+
+  other-pipeline-1: |-
+    # Sync the file into the nginx pod via DevSpace sync
+    start_dev sqs --set imageSelector=roribio16/alpine-sqs \
+                    --set "sync[0].path=./config/elasticmq.conf:/opt/custom/elasticmq.conf" \
+                    --set "sync[0].noWatch=true" \
+                    --set 'ports[0].port=9325'
+  forward-mysql: |-
+    # Start port-forwarding and open the url
+    start_dev mysql --set imageSelector=mysql:8 \
+                    --set 'ports[0].port=3306:3306'
+# This is a list of `images` that DevSpace can build for this project
+# We recommend to skip image building during development (devspace dev) as much as possible
+
+# This is a list of `deployments` that DevSpace can create for this project
+deployments:
+  ui:
+    # This deployment uses `helm` but you can also define `kubectl` deployments or kustomizations
+    helm:
+      # We are deploying this project with the Helm chart you provided
+      chart:
+        name: component-chart
+        repo: https://charts.devspace.sh
+      values:
+        containers:
+          - image: node:18-slim #dummy container
+        labels:
+          app: appio-reviews
+        nodeSelector:
+          node-role.kubernetes.io/dev: dev
+        tolerations:
+          - key: "dev"
+            operator: "Equal"
+            value: "dev"
+            effect: "NoSchedule"            
+        service:
+          ports:
+            - port: 3000
+        ingress:
+          tls: true
+          tlsClusterIssuer: le-global-issuer
+          rules:
+            - host: ${SUB_DOMAIN}.getappio.com
+  redis:
+    helm:
+      # We are deploying this project with the Helm chart you provided
+      chart:
+        name: component-chart
+        repo: https://charts.devspace.sh
+      values:
+        containers:
+          - image: redis #dummy container
+            command: ["redis-server"]
+            args: ["--save", "\"\"", "--appendonly", "no"]
+        nodeSelector:
+          node-role.kubernetes.io/dev: dev
+        tolerations:
+          - key: "dev"
+            operator: "Equal"
+            value: "dev"
+            effect: "NoSchedule"            
+        service:
+          ports:
+            - port: 6379
+  mysql:
+    helm:
+      # We are deploying this project with the Helm chart you provided
+      chart:
+        name: component-chart
+        repo: https://charts.devspace.sh
+      values:
+        containers:
+        - name: mysql
+          image: mysql:8
+          env:
+          - name: MYSQL_DATABASE
+            value: review
+          - name: MYSQL_ROOT_PASSWORD
+            value: S3cret
+          - name: MYSQL_PASSWORD
+            value: mauFJcuf5dhRMQrjj
+          - name: MYSQL_USER
+            value: review
+          args: ["--default-authentication-plugin=mysql_native_password"]
+          volumeMounts:
+          - containerPath: /var/lib/mysql
+            volume:
+              name: mysql-persistent-storage
+              subPath: /mysql
+              readOnly: false
+        nodeSelector:
+          node-role.kubernetes.io/dev: dev
+        tolerations:
+          - key: "dev"
+            operator: "Equal"
+            value: "dev"
+            effect: "NoSchedule"            
+        volumes:
+        - name: mysql-persistent-storage
+          size: 2Gi
+        service:
+          ports:
+            - port: 3306
+  sqs:
+    helm:
+      # We are deploying this project with the Helm chart you provided
+      chart:
+        name: component-chart
+        repo: https://charts.devspace.sh
+      values:
+        containers:
+          - image: roribio16/alpine-sqs #dummy container
+        nodeSelector:
+          node-role.kubernetes.io/dev: dev
+        tolerations:
+          - key: "dev"
+            operator: "Equal"
+            value: "dev"
+            effect: "NoSchedule"            
+        service:
+          ports:
+            - port: 9324
+            - port: 9325
+dev:
+  sqs:
+    imageSelector: roribio16/alpine-sqs
+    sync:
+      - path: ./config/elasticmq.conf:/opt/config/elasticmq.conf
+        noWatch: true
+        onUpload:
+          # These post-sync commands will be executed after DevSpace synced changes to the container in the given order
+          exec:
+          - command: supervisorctl restart elasticmq
+    ports:
+      - port: 9235
+  ui:
+    # Search for the container that runs this image
+    # imageSelector: registry.gitlab.com/appio-reviews/appio-reviews
+    resources:
+      limits:
+        memory: 4Gi
+      requests:
+        cpu: "1"
+        memory: 2Gi
+    labelSelector:
+      app: appio-reviews
+    # attach:
+    #   enabled: true
+    #   disableReplace: true
+    # Replace the container image with this dev-optimized image (allows to skip image building during development)
+    # devImage: node:18-slim
+    # Sync files between the local filesystem and the development container
+    sync:
+      - path: ./
+        excludePaths:
+          - node_modules
+          - .next
+        uploadExcludeFile: .dockerignore
+    # Open a terminal and use the following command to start it
+    workingDir: /app
+    # command: ["npm"]
+    # args: ["run", "devgg"]    
+    terminal:
+      command: npm i && bash
+      #bash ./devspace_start.sh
+      # disableReplace: true
+    # Inject a lightweight SSH server into the container (so your IDE can connect to the remote dev env)
+    ssh:
+      enabled: true
+    # Make the following commands from my local machine available inside the dev container
+    # proxyCommands:
+    #   - command: devspace
+    #   - command: kubectl
+    #   - command: helm
+    #   - gitCredentials: true
+    # Forward the following ports to be able access your application via localhost
+    ports:
+      - port: ${DEBUG_PORT}
+      - port: 3000
+    # Open the following URLs once they return an HTTP status code other than 502 or 503
+    # open:
+    #   - url: http://localhost:3000
+    persistPaths:
+      - path: /app

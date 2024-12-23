@@ -1,0 +1,192 @@
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9235 -> 9235
+Forwarding from [::1]:9235 -> 9235
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9235 -> 9235
+Forwarding from [::1]:9235 -> 9235
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9235 -> 9235
+Forwarding from [::1]:9235 -> 9235
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9235 -> 9235
+Forwarding from [::1]:9235 -> 9235
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9235 -> 9235
+Forwarding from [::1]:9235 -> 9235
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9235 -> 9235
+Forwarding from [::1]:9235 -> 9235
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9235 -> 9235
+Forwarding from [::1]:9235 -> 9235
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3000
+Handling connection for 3000
+Handling connection for 3000
+Handling connection for 3000
+Handling connection for 3000
+Handling connection for 3000
+Handling connection for 3000
+Handling connection for 3000
+Handling connection for 3000
+{"level":"error","msg":"an error occurred forwarding 3000 -\u003e 3000: error forwarding port 3000 to pod c10fec2ab0743136c2059530d3f02d0bf4841d76f8f9e466b153de565ab716be, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-fc5ec864-80f9-672c-8fac-35da908057f4\": read tcp4 127.0.0.1:44814-\u003e127.0.0.1:3000: read: connection reset by peer","time":"2024-12-19T14:07:01+07:00"}
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Forwarding from 127.0.0.1:3306 -> 3307
+Forwarding from [::1]:3306 -> 3307
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:54:53+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:54:54+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:54:54+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:54:55+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:54:56+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:57:24+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:57:32+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:58:00+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:58:01+07:00"}
+Handling connection for 3306
+{"level":"error","msg":"an error occurred forwarding 3306 -\u003e 3307: error forwarding port 3307 to pod b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-65009505-8a4e-4843-cb84-6209daa385ae\": failed to connect to localhost:3307 inside namespace \"b7740645313521b7637e133b303852c1ca129fbcef689f40545d3357f922ab42\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T10:58:01+07:00"}
+Forwarding from 127.0.0.1:3307 -> 3307
+Forwarding from [::1]:3307 -> 3307
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3307
+{"level":"error","msg":"an error occurred forwarding 3307 -\u003e 3307: error forwarding port 3307 to pod 176ba1cddc2bbee18d795c5fbdf7953f5453f99d22aa012fcbcd6d48f6438b68, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-f000a048-2192-6acf-b680-89946e8b1880\": failed to connect to localhost:3307 inside namespace \"176ba1cddc2bbee18d795c5fbdf7953f5453f99d22aa012fcbcd6d48f6438b68\", IPv4: dial tcp4 127.0.0.1:3307: connect: connection refused IPv6 dial tcp6 [::1]:3307: connect: connection refused","time":"2024-12-20T11:04:58+07:00"}
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+{"level":"error","msg":"error copying from local connection to remote stream: writeto tcp4 127.0.0.1:3306-\u003e127.0.0.1:52577: read tcp4 127.0.0.1:3306-\u003e127.0.0.1:52577: wsarecv: An existing connection was forcibly closed by the remote host.","time":"2024-12-20T11:10:27+07:00"}
+{"level":"error","msg":"error copying from local connection to remote stream: writeto tcp4 127.0.0.1:3306-\u003e127.0.0.1:52576: read tcp4 127.0.0.1:3306-\u003e127.0.0.1:52576: wsarecv: An existing connection was forcibly closed by the remote host.","time":"2024-12-20T11:10:27+07:00"}
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 3306
+Handling connection for 9231
+Handling connection for 3000
+{"level":"error","msg":"an error occurred forwarding 9231 -\u003e 9231: error forwarding port 9231 to pod b87f4c9719c90d56c7d614fd94f2d0ea73e9dce724bc3aafb273e7e1bff46d6a, uid : failed to execute portforward in network namespace \"/var/run/netns/cni-374f5ec9-7a7d-6162-eb50-de2f2b3696de\": failed to connect to localhost:9231 inside namespace \"b87f4c9719c90d56c7d614fd94f2d0ea73e9dce724bc3aafb273e7e1bff46d6a\", IPv4: dial tcp4 127.0.0.1:9231: connect: connection refused IPv6 dial tcp6 [::1]:9231: connect: connection refused","time":"2024-12-20T11:14:05+07:00"}
+Handling connection for 3000
+Handling connection for 11972
+Handling connection for 3000
+Handling connection for 11972
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3306
+Handling connection for 3306
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:9231 -> 9231
+Forwarding from [::1]:9231 -> 9231
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+Forwarding from 127.0.0.1:11972 -> 8022
+Forwarding from [::1]:11972 -> 8022
+Handling connection for 3306
+Handling connection for 3306

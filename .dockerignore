@@ -1,0 +1,6 @@
+node_modules
+cli3/node_modules
+Dockerfile
+
+# Ignore .git folder
+.git

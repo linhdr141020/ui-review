@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  # redis:
+  #   image: redis
+  #   command: redis-server --save "" --appendonly no
+  #   ports:
+  #     - 6379:6379
+  mysql:
+    image: mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_DATABASE=review
+      - MYSQL_ROOT_PASSWORD=S3cret
+      - MYSQL_PASSWORD=mauFJcuf5dhRMQrjj
+      - MYSQL_USER=review
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql:/var/lib/mysql
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   environment:
+  #     ADMINER_DEFAULT_SERVER: mysql
+  #   ports:
+  #     - 8080:8080
+  sqs:                           
+    image: roribio16/alpine-sqs
+    ports:                             
+      - "9324:9324"                             
+      - "9325:9325"                           
+    volumes:
+      - ./config/elasticmq.conf:/opt/custom/elasticmq.conf    
+  # appio-reviews:
+  #   depends_on:
+  #     - redis
+  #     - mysql
+  #     - sqs
+  #   ports:
+  #     - 3000:3000
+  #     - 9231:9229
+  #   build: ./
+  #   labels:
+  #     dev.okteto.com/auto-ingress: "true"  
+volumes:
+  mysql:

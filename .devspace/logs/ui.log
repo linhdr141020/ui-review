@@ -1,0 +1,8 @@
+{"level":"error","msg":"Error in /api/resource?resource=pods\u0026context=ak\u0026namespace=linh-dev-reviews: request: Get \"https://38.105.232.215:6443/api/v1/namespaces/linh-dev-reviews/pods\": context canceled","time":"2024-12-19T11:55:26+07:00"}
+{"level":"error","msg":"Error in /api/resource?resource=services\u0026context=ak\u0026namespace=linh-dev-reviews: request: Get \"https://38.105.232.215:6443/api/v1/namespaces/linh-dev-reviews/services\": context canceled","time":"2024-12-19T13:48:14+07:00"}
+{"level":"error","msg":"Error in /api/resource?resource=pods\u0026context=ak\u0026namespace=linh-dev-reviews: request: Get \"https://38.105.232.215:6443/api/v1/namespaces/linh-dev-reviews/pods\": context canceled","time":"2024-12-19T13:48:14+07:00"}
+{"level":"error","msg":"Error in /api/resource?resource=pods\u0026context=ak\u0026namespace=linh-dev-reviews: request: context canceled","time":"2024-12-19T13:52:21+07:00"}
+{"level":"error","msg":"Error in /api/resource?resource=pods\u0026context=ak\u0026namespace=linh-dev-shop: request: context canceled","time":"2024-12-19T13:52:21+07:00"}
+{"level":"error","msg":"Error in /api/resource?resource=namespaces\u0026context=ak: request: Get \"https://38.105.232.215:6443/api/v1/namespaces\": context canceled","time":"2024-12-19T13:54:02+07:00"}
+{"level":"error","msg":"Error in /api/resource?resource=namespaces\u0026context=ak: request: Get \"https://38.105.232.215:6443/api/v1/namespaces\": context canceled","time":"2024-12-19T13:58:23+07:00"}
+{"level":"error","msg":"Error in /api/resource?resource=namespaces\u0026context=ak: request: Get \"https://38.105.232.215:6443/api/v1/namespaces\": context canceled","time":"2024-12-19T14:03:36+07:00"}
